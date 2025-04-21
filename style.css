@@ -1,0 +1,426 @@
+/*login e cadastro*/
+
+:root{
+    font-size: 10px;
+    --main-color :#007bff;
+    --black: #000000;
+    --border: solid 0.25rem  white;
+    --caixa: #121212;
+    --amarelo: #ffcc00;
+    --white: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 90%;
+}
+
+.header section {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 1.5rem 0;
+}
+
+.he
+
+.header .bi-bag-check-fill {
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+
+
+.header section a img {
+    height: 15rem;
+
+}
+
+
+
+.header section nav {
+    display: flex;
+    align-items: center;
+}
+
+.header section nav a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: white;
+    transition: 0.2s linear;
+}
+
+.header section nav a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+}
+.header section nav i:hover {
+    border-bottom: 0.1rem solid var(--bg);
+    padding-bottom: 0.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 3rem; /* Tamanho maior para destacar */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 0.5rem; /* Espaçamento ao redor do ícone */
+    display: none; /* Ocultar o botão em telas grandes */
+}
+
+.menu-toggle:hover {
+    color: var(--main-color); /* Cor do ícone no hover */
+    transform: scale(1.2);  /* Aumenta o tamanho no hover */
+}
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 20rem;
+}
+.auth-box {
+    background-color: var(--caixa);
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    border: var(--border);
+}
+
+.form-container h2{
+    color: var(--white);
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 4rem;
+        border-bottom: var(--border);
+        display: flex;
+        margin-left: 2rem;
+        margin-right: 2rem;
+
+}
+
+.form-container {
+    display: block;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    color: #fff;;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+.input-group i {
+    color: var(--main-color);
+    margin-right: 0.5rem;
+    font-size: 1.6rem;
+    margin-left: 10px;
+}
+
+.input-group input {
+    margin-top: 8px;
+    background-color: #1E1E1E;
+    color: var(--white);
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 5px 20px;
+    border: 0.1rem solid var(--white);
+    border-radius: 8px;
+}
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+
+
+
+.btn-submit {
+    width: 40%;
+    background-color: var(--main-color);
+    border: var(--main-color) 1px solid
+;    color: var(--white);
+    font-size: 1.7rem;
+    padding: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin: 0 auto;
+    display: block;
+}
+
+.btn-submit:hover {
+    background-color: blue;
+}
+
+
+#resetar {
+    text-align: right;
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+}
+
+.form-container p {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+
+
+.form-container a {
+    color: var(--main-color);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form-container a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color) ;
+    padding-bottom: 0.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .auth-box {
+        padding: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .input-group input {
+        font-size: 1.4rem;
+    }
+
+    .btn-submit {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .footer-bottom p {
+        font-size: 1.8rem;
+    }
+}
+
+/* Estilo do campo de senha */
+.senha-container {
+    position: relative;
+    width: 100%;
+}
+
+.senha-container input[type="password"] {
+    background-color: var(--black);
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 1rem;
+    width: 100%;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+/* Estilo do ícone de cadeado */
+.senha-container i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    color: var(--white);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.senha-container i:hover {
+    color: var(--main-color); /* Mudar a cor ao passar o mouse */
+}
+
+.main-title{
+    font-size: 62px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 120px 0 40px;
+}
+
+
+.pricing{
+    display: flex;
+    gap: 16px;
+}
+
+.pricing-plan{
+    flex: 1;
+    background-color: var(--caixa);
+    padding: 30px;
+    border-radius: 10px;
+    border: var(--border);
+    display: flex;
+    flex-direction: column;
+}
+.pricing-plan1{
+    flex: 1;
+    background-color: var(--caixa);
+    padding: 30px;
+    border-radius: 10px;
+    border: var(--main-color) 0.25rem solid;
+    display: flex;
+    flex-direction: column;
+}.pricing-plan2{
+    flex: 1;
+    background-color: var(--caixa);
+    padding: 30px;
+    border-radius: 10px;
+    border: var(--amarelo) 0.25rem solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-plan__titulo{
+    text-transform: uppercase;
+    border-bottom: 1px solid  white;
+    margin: 0;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+}
+.pricing-plan__titulo1{
+    text-transform: uppercase;
+    border-bottom: 1px solid  var(--main-color);
+    margin: 0;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+    color: var(--main-color);
+}
+.pricing-plan__titulo2{
+    text-transform: uppercase;
+    border-bottom: 1px solid  var(--amarelo);
+    margin: 0;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+    color: var(--amarelo);
+}
+
+
+.pricing-plan p{
+    margin-top: 0;
+}
+
+.pricing-plan_preço{
+    font-size: 34px;
+}
+
+.pricing-plan_carateristicas{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 35px;
+    color: #b5b5b5;
+    padding-left: 16px;
+    line-height: 1.8;
+    flex-grow: 1;
+}
+
+.pricing-plan_carateristicas li {
+    position: relative;
+    padding-left: 2.5rem; /* Adiciona espaço para o ícone */
+    font-size: 1.6rem;
+}
+
+.pricing-plan_carateristicas li::before {
+    content: "\F633"; /* Código do ícone Bootstrap (exemplo: check-circle) */
+    font-family: "Bootstrap-icons";
+    position: absolute;
+    left: 0;
+    color: green;
+    font-size: 2rem;
+}
+
+.pricing-plan_carateristicas .none li::before {
+    content: "\F659"; /* Código do ícone Bootstrap (exemplo: x-circle) */
+    font-family: "Bootstrap-icons";
+    position: absolute;
+    left: 0;
+    color: red;
+    font-size: 2rem;
+}
+
+.pricing-plan_ação1{
+    text-decoration: none;
+    color: var(--white);
+    border: var(--main-color) 1px solid;
+    background-color: transparent;
+    border-radius: 18px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 16px 10px;
+    text-align: center;
+}
+
+.pricing-plan_ação1:hover{
+    outline: 2px solid  var(--main-color);
+    background-color: var(--main-color);
+    color: white;
+}
+
+.pricing-plan_ação2{
+    text-decoration: none;
+    color: var(--white);
+    border: var(--amarelo) 1px solid;
+    background-color: transparent;
+    border-radius: 18px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 16px 10px;
+    text-align: center;
+}
+
+.pricing-plan_ação2:hover{
+    outline: 2px solid  var(--amarelo);
+    background-color: var(--amarelo);
+    color: white;
+}
